@@ -111,7 +111,7 @@ export function Input({
       </div>
       {touched && error && (
         <p className="text-xs text-red-500 mt-1 flex items-center gap-1">
-          <span></span> {error}
+          <span>⚠️</span> {error}
         </p>
       )}
       {touched && !error && value && (
@@ -265,7 +265,6 @@ export function PropertyCard({ property, onClick }) {
   return (
     <Card className="cursor-pointer hover:-translate-y-1 hover:shadow-md transition-all duration-200 overflow-hidden group">
       <div onClick={onClick}>
-        {/* Image Container */}
         <div className="h-48 w-full bg-gray-200 relative overflow-hidden">
           {property.mainImage && !imageError ? (
             <img 
@@ -275,7 +274,6 @@ export function PropertyCard({ property, onClick }) {
               onError={() => setImageError(true)}
             />
           ) : (
-            // Fallback colored placeholder with first letter
             <div 
               className="w-full h-full flex items-center justify-center text-5xl font-bold font-serif text-[#1B2B4B]/20"
               style={{ background: `hsl(${property.id * 47}, 35%, 93%)` }}
@@ -284,7 +282,6 @@ export function PropertyCard({ property, onClick }) {
             </div>
           )}
           
-          {/* Image count badge */}
           {property.images && property.images.length > 1 && (
             <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
               <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
@@ -295,7 +292,6 @@ export function PropertyCard({ property, onClick }) {
             </div>
           )}
 
-          {/* Rating badge overlay */}
           <div className="absolute top-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
             <span className="text-amber-400">★</span>
             {property.rating}
@@ -306,14 +302,12 @@ export function PropertyCard({ property, onClick }) {
           <h3 className="font-semibold text-[#1B2B4B] font-serif mb-0.5 truncate">{property.title}</h3>
           <p className="text-gray-400 text-xs mb-2 truncate">{property.location}</p>
           
-          {/* Badges */}
           <div className="flex flex-wrap gap-1 mb-3">
             {property.smoking && <Badge color="gray">Smoking OK</Badge>}
             {property.petFriendly && <Badge color="green">Pet Friendly</Badge>}
             {property.disabilityAccess && <Badge color="blue">Accessible</Badge>}
           </div>
           
-          {/* Price and Reviews */}
           <div className="flex items-center justify-between">
             <span className="text-[#E8634A] font-bold text-sm">
               {KES(property.price)}
