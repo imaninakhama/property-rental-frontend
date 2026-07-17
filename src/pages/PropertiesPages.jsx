@@ -85,7 +85,7 @@ function ImageGalleryModal({ images, title, onClose }) {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all ${
+                className={`shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all ${
                   index === currentIndex 
                     ? 'border-[#E8634A] shadow-lg shadow-[#E8634A]/20' 
                     : 'border-transparent hover:border-gray-400'
@@ -602,7 +602,7 @@ export function PropertyDetailPage({ params }) {
                   <button
                     key={index}
                     onClick={() => setGalleryIndex(index)}
-                    className={`flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all ${
+                    className={`shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all ${
                       index === galleryIndex 
                         ? 'border-[#E8634A] shadow-lg shadow-[#E8634A]/20' 
                         : 'border-transparent hover:border-gray-400'

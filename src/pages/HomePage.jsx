@@ -285,7 +285,7 @@ export function HomePage() {
                       // Open full gallery with all images
                       navigate(`/properties/${selectedProperty.id}`);
                     }}
-                    className="flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 border-transparent hover:border-[#E8634A] transition-all"
+                    className="shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 border-transparent hover:border-[#E8634A] transition-all"
                   >
                     <img 
                       src={image} 
