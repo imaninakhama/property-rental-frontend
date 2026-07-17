@@ -3,7 +3,7 @@ import { useRouter } from "../context/AuthContext";
 import { BOOKINGS, KES } from "../data/constants";
 import { Card, Btn, Alert, StatusBadge } from "../components/common";
 
-// ─── BOOKING DETAIL ───────────────────────────────────────────────────────────
+//booking details//
 export function BookingDetailPage({ params }) {
   const { navigate } = useRouter();
   const booking = BOOKINGS.find(b => b.id === params.id);
